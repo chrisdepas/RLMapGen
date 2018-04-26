@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\GameState">
+      <UniqueIdentifier>{6ef1912c-62d1-4cb4-aee7-f0aca5d1dcff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GameState">
+      <UniqueIdentifier>{02efc101-b18e-4b7d-b02b-9d9347af8327}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Ini">
+      <UniqueIdentifier>{55fa4f6e-2c8d-466f-af0a-a5ef1cb76f11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Ini">
+      <UniqueIdentifier>{3da0c3ff-32d1-463c-b4e3-75a45897397f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\EngineCore">
+      <UniqueIdentifier>{b86a8706-a0ce-4680-aaf9-f417450144a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\EngineCore">
+      <UniqueIdentifier>{e77ef652-cb4d-4a5a-9e64-b2ffa6c3aa79}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CGame.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CSettings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Actions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CWorldPlayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CWorldMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CPerlinVisualiser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CPerlinMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CWorldPlayerHUD.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CMenuOverlay.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameState.h">
+      <Filter>Header Files\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="CGameStateHandler.h">
+      <Filter>Header Files\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="CWorldState.h">
+      <Filter>Header Files\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="CMenuState.h">
+      <Filter>Header Files\GameState</Filter>
+    </ClInclude>
+    <ClInclude Include="CIniItem.h">
+      <Filter>Header Files\Ini</Filter>
+    </ClInclude>
+    <ClInclude Include="CIniReader.h">
+      <Filter>Header Files\Ini</Filter>
+    </ClInclude>
+    <ClInclude Include="CIniWriter.h">
+      <Filter>Header Files\Ini</Filter>
+    </ClInclude>
+    <ClInclude Include="CDrawingManager.h">
+      <Filter>Header Files\EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="CInput.h">
+      <Filter>Header Files\EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="CRandom.h">
+      <Filter>Header Files\EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="CTextureManager.h">
+      <Filter>Header Files\EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="CTime.h">
+      <Filter>Header Files\EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="CWindowManager.h">
+      <Filter>Header Files\EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="CSimpleLoadingScreen.h">
+      <Filter>Header Files\EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Math.h">
+      <Filter>Header Files\EngineCore</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>Header Files\EngineCore</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CGame.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CWorldMap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CWorldPlayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CPerlinVisualiser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CPerlinMap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CMenuOverlay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameState.cpp">
+      <Filter>Source Files\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameStateHander.cpp">
+      <Filter>Source Files\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="CMenuState.cpp">
+      <Filter>Source Files\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="CWorldState.cpp">
+      <Filter>Source Files\GameState</Filter>
+    </ClCompile>
+    <ClCompile Include="CIniItem.cpp">
+      <Filter>Source Files\Ini</Filter>
+    </ClCompile>
+    <ClCompile Include="CIniReader.cpp">
+      <Filter>Source Files\Ini</Filter>
+    </ClCompile>
+    <ClCompile Include="CIniWriter.cpp">
+      <Filter>Source Files\Ini</Filter>
+    </ClCompile>
+    <ClCompile Include="CDrawingManager.cpp">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="CInput.cpp">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="CRandom.cpp">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="CSimpleLoadingScreen.cpp">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="CTextureManager.cpp">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="CTime.cpp">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="CWindowManager.cpp">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector.cpp">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClCompile>
+    <ClCompile Include="Math.cpp">
+      <Filter>Source Files\EngineCore</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
