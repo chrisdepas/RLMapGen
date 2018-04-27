@@ -1,4 +1,6 @@
-#pragma once 
+#ifndef __CINPUT_H__
+#define __CINPUT_H__
+
 #include <vector>
 #include <map>
 #include "Vector.h"
@@ -6,12 +8,13 @@
 #include "Actions.h"
 
 class CGame;
-class CInput
-{
+
+class CInput {
 	struct SMouseButtonEvent {
 		sf::Mouse::Button m_button;;
 		Vector2i m_vPosition;
 	};
+
 	std::map< sf::Keyboard::Key, EAction > m_KeyMap;
 	std::map< sf::Keyboard::Key, EAction > m_DefaultMap;
 	Vector2i m_vMousePosition;
@@ -54,3 +57,5 @@ public:
 	/* Get a character, !blocking!, returns false on ESC press */
 	bool GetChar(char& c, CGame* pGame);
 };
+
+#endif

@@ -1,9 +1,12 @@
-#pragma once
+#ifndef __CMENUSTATE_H__
+#define __CMENUSTATE_H__
+
 #include "CGameState.h"
+
 #define MENUSTATE_FONT_SIZE 24
 
-class CMenuState : public CGameState
-{
+class CMenuState : public CGameState {
+
 private:
 	static CMenuState m_MenuState;
 
@@ -23,8 +26,9 @@ public:
 	void PauseState();
 	void ResumeState();
 
-	static CMenuState* Instance()
-	{
+	static CMenuState* Instance() {
 		return &m_MenuState;
 	}
 };
+
+#endif

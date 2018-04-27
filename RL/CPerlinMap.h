@@ -1,4 +1,5 @@
-#pragma once 
+#ifndef __CPERLINMAP_H__
+#define __CPERLINMAP_H__
 
 #include "CGame.h"
 #include "Vector.h"
@@ -6,8 +7,7 @@
 #define PERLINMAP_WIDTH 1024
 #define PERLINMAP_HEIGHT PERLINMAP_WIDTH
 
-class CPerlinMap
-{
+class CPerlinMap {
 	int m_iWidth;
 	int m_iHeight;
 
@@ -23,3 +23,5 @@ public:
 	/* Calculate a suitable spawn point, in tile indexes (not loc!) */
 	Vector2i CalcSpawn();
 };
+
+#endif

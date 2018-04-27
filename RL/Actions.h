@@ -1,6 +1,7 @@
-#pragma once
-enum EAction
-{
+#ifndef _ACTIONS_H__
+#define _ACTIONS_H__
+
+enum EAction {
 	/* Special actions */
 	Action_None, // No action - do nothing
 	Action_Unknown, // Unknown action, returned on error
@@ -20,6 +21,8 @@ enum EAction
 	/* Menu */
 	Action_Menu_Toggle,
 	Action_Menu_Select,
+	Action_Menu_Down,
+	Action_Menu_Up,
 
 	/* Gameplay */
 	Action_Grab, // Pick up item(s) on current tile 
@@ -33,3 +36,5 @@ enum EAction
 	Action_Wait, //Waste turns
 	Action_Throw, //Throw an item
 };
+
+#endif

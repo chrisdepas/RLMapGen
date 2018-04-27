@@ -1,11 +1,13 @@
-#pragma once 
-struct Vector2f
-{
+#ifndef __VECTOR_H__
+#define __VECTOR_H__
+
+struct Vector2f {
 	float X;
 	float Y;
 
-	Vector2f(){}
+	Vector2f() {}
 	Vector2f(float X, float Y);
+
 	float Length();
 
 	Vector2f operator/(float f);
@@ -15,14 +17,15 @@ struct Vector2f
 	Vector2f operator*(int i);
 };
 
-struct Vector2i
-{
+struct Vector2i {
 	int X;
 	int Y;
 
-	float Length();
 	Vector2i(){}
 	Vector2i(int X, int Y);
+
+	float Length();
+	
 	Vector2i operator/(int factor);
 	Vector2i operator-(Vector2i c);
 	Vector2i operator+(Vector2i c);
@@ -31,8 +34,7 @@ struct Vector2i
 	bool operator!=(Vector2i c);
 };
 
-struct Vector3f
-{
+struct Vector3f {
 	float X;
 	float Y;
 	float Z;
@@ -40,9 +42,10 @@ struct Vector3f
 	float Length();
 };
 
-struct Vector3i
-{
+struct Vector3i {
 	int X;
 	int Y;
 	int Z;
 };
+
+#endif

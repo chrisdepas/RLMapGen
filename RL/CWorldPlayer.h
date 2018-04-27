@@ -1,10 +1,10 @@
-#pragma once
+#ifndef __CWORLDPLAYER_H__
+#define __CWORLDPLAYER_H__
 
 #include "Vector.h"
 #include "CGame.h"
 
-class CWorldPlayer
-{
+class CWorldPlayer {
 	Vector2f m_vfPosition;
 
 	float m_fRotation;
@@ -16,15 +16,15 @@ class CWorldPlayer
 	float m_fSprintMultiplier;
 	float m_fSprintTime;
 	float m_fMaxSprintTime;
+	float m_fLastMoveTime;
+	float m_fLastSprintTime;
 
 	bool m_bWalkingForward;
 	bool m_bWalkingBack;
 	bool m_bLeftStrafe;
 	bool m_bRightStrafe;
 	bool m_bSprint;
-	float m_fLastMoveTime;
-	float m_fLastSprintTime;
-
+	
 public:
 	void LookAt(Vector2i MousePosition, CGame* pGame);
 	void Initialise(CGame* pGame);
@@ -46,3 +46,5 @@ public:
 
 	bool CanSprint();
 };
+
+#endif

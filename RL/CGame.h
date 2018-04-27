@@ -1,4 +1,6 @@
-#pragma once
+#ifndef __CGAME_H__
+#define __CGAME_H__
+
 #include "CGameStateHandler.h"
 #include "CWindowManager.h"
 #include "CDrawingManager.h"
@@ -6,10 +8,12 @@
 #include "CTime.h"
 #include "CRandom.h"
 #include "CSimpleLoadingScreen.h"
+
 #define SETTINGS_FILE_PATH ".\\Settings.ini"
-class CGame
-{
+
+class CGame {
 	bool				m_bInitialised;
+
 public:
 	CSettings			m_Settings;
 	CWindowManager		m_WindowManager;
@@ -22,7 +26,6 @@ public:
 	CTextureManager		m_TextureManager;
 	CTime				m_Time;
 	CSimpleLoadingScreen m_Loading;
-//	CSoundManager		m_SoundManager;
 
 	CGame();
 	~CGame();
@@ -31,4 +34,12 @@ public:
 	void Draw();
 	void HandleInput();
 	void Step();
+	void Quit();
+
+	// Helper funcs
+	__inline float Time() { 
+		return m_Time.Time(); 
+	}
 };
+
+#endif

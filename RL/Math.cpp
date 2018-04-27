@@ -3,8 +3,7 @@
 
 #define MY_PI 3.14159265f
 
-float atan2pi(float o, float a)
-{
+float atan2pi(float o, float a) {
 	//90, 180, 270, 360 degrees
 	if (o == 0 && a >= 0)
 		return 0.0f;

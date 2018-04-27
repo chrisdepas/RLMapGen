@@ -1,6 +1,7 @@
-#pragma once 
-struct CIniItem
-{
+#ifndef __CINIITEM_H__
+#define __CINIITEM_H__
+
+struct CIniItem {
 	char*	m_szKey;
 	char*	m_szValue;
 
@@ -10,3 +11,5 @@ struct CIniItem
 	float	GetFloat(); /* Get float representation of value */
 	char*	GetString(); /* Gets string representation of value. !Don't save! may be free'd */
 };
+
+#endif

@@ -5,10 +5,9 @@ class CGame;
 class CGameState; 
 
 /*	A state in the game, such as main menu
-Handled by CGameStateHandler
-*/
-class CGameState
-{
+Handled by CGameStateHandler */
+class CGameState {
+
 public:
 	CGameState* m_pgsReturnState;
 	void SetReturnState(CGameState* pReturnState);
@@ -23,6 +22,5 @@ public:
 	virtual void PauseState();
 	virtual void ResumeState();
 };
-
 
 #endif

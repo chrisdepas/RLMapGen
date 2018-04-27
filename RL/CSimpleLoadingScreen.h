@@ -1,4 +1,6 @@
-#pragma once
+#ifndef __CSIMPLELOADINGSCREEN_H__
+#define __CSIMPLELOADINGSCREEN_H__
+
 /*
 	Simple loading screen
 	Draws only when progress or activity changed
@@ -10,9 +12,10 @@
 #define SIMPLELOADINGSCREEN_MAXACTIVITY 32
 #define SIMPLELOADINGSCREEN_FONTSIZE 32
 #define SIMPLELOADINGSCREEN_FONTSIZE_PREV 20
+
 class CGame;
-class CSimpleLoadingScreen
-{
+
+class CSimpleLoadingScreen {
 	char* m_szActivity[SIMPLELOADINGSCREEN_MAXACTIVITY];
 	int m_iActivityCount;
 	float m_fProgress;
@@ -26,3 +29,5 @@ public:
 	void SetActivity(char* szActivity, CGame* pGame);
 	void SetProgress(float fPercent, CGame* pGame);
 };
+
+#endif

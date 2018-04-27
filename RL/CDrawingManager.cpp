@@ -1,18 +1,17 @@
 #include "stdafx.h"
 #include "CDrawingManager.h"
 
-CDrawingManager::CDrawingManager()
-{
+CDrawingManager::CDrawingManager() {
 }
-CDrawingManager::~CDrawingManager()
-{
+
+CDrawingManager::~CDrawingManager() {
 }
-void CDrawingManager::Initialise()
-{
-	m_fFont.loadFromFile(GAME_FONT_FILE);
+
+void CDrawingManager::Initialise() {
+	m_fFont.loadFromFile(GAME_FONT_FILE); 
 }
-void CDrawingManager::DrawSprite(CWindowManager* pWindowManager, int X, int Y, int iWidth, int iHeight, sf::Texture* pTexture)
-{
+
+void CDrawingManager::DrawSprite(CWindowManager* pWindowManager, int X, int Y, int iWidth, int iHeight, sf::Texture* pTexture) {
 	if (!pTexture)
 		return;
 
@@ -29,9 +28,9 @@ void CDrawingManager::DrawSprite(CWindowManager* pWindowManager, int X, int Y, i
 	/* Draw to window*/
 	pWindowManager->Draw(&sp);
 }
+
 void CDrawingManager::DrawText(CWindowManager* pWindowManager, char* szText, int X, int Y, int iSize, unsigned __int8 R, unsigned __int8 G,
-	unsigned __int8 B, unsigned __int8 A)
-{
+	unsigned __int8 B, unsigned __int8 A) {
 	sf::Text text;
 	text.setFont(m_fFont);
 	text.setString(szText);
@@ -40,9 +39,9 @@ void CDrawingManager::DrawText(CWindowManager* pWindowManager, char* szText, int
 	text.setPosition((float)X, (float)Y);
 	pWindowManager->Draw(&text);
 }
+
 void CDrawingManager::DrawTextCentred(CWindowManager* pWindowManager, char* szText, int X, int Y, int iSize, unsigned __int8 R,
-	unsigned __int8 G, unsigned __int8 B, unsigned __int8 A)
-{
+	unsigned __int8 G, unsigned __int8 B, unsigned __int8 A) {
 	sf::Text text;
 	text.setFont(m_fFont);
 	text.setString(szText);
@@ -56,9 +55,9 @@ void CDrawingManager::DrawTextCentred(CWindowManager* pWindowManager, char* szTe
 	text.setPosition((float)X, (float)Y);
 	pWindowManager->Draw(&text);
 }
+
 void CDrawingManager::DrawTextCentredX(CWindowManager* pWindowManager, char* szText, int X, int Y, int iSize, unsigned __int8 R,
-	unsigned __int8 G, unsigned __int8 B, unsigned __int8 A)
-{
+	unsigned __int8 G, unsigned __int8 B, unsigned __int8 A) {
 	sf::Text text;
 	text.setFont(m_fFont);
 	text.setString(szText);
@@ -72,8 +71,8 @@ void CDrawingManager::DrawTextCentredX(CWindowManager* pWindowManager, char* szT
 	text.setPosition((float)X, (float)Y);
 	pWindowManager->Draw(&text);
 }
-void CDrawingManager::DrawSpriteCentred(CWindowManager* pWindowManager, int X, int Y, int iWidth, int iHeight, float fAlpha, sf::Texture* pTexture)
-{
+
+void CDrawingManager::DrawSpriteCentred(CWindowManager* pWindowManager, int X, int Y, int iWidth, int iHeight, float fAlpha, sf::Texture* pTexture) {
 	if (!pTexture)
 		return;
 
@@ -96,8 +95,8 @@ void CDrawingManager::DrawSpriteCentred(CWindowManager* pWindowManager, int X, i
 	/* Draw to window*/
 	pWindowManager->Draw(&sp);
 }
-void CDrawingManager::DrawSpriteCentred(CWindowManager* pWindowManager, int X, int Y, int iWidth, int iHeight, float fAlpha, float fRotation, sf::Texture* pTexture)
-{
+
+void CDrawingManager::DrawSpriteCentred(CWindowManager* pWindowManager, int X, int Y, int iWidth, int iHeight, float fAlpha, float fRotation, sf::Texture* pTexture) {
 	if (!pTexture)
 		return;
 
@@ -121,8 +120,8 @@ void CDrawingManager::DrawSpriteCentred(CWindowManager* pWindowManager, int X, i
 	/* Draw to window*/
 	pWindowManager->Draw(&sp);
 }
-void CDrawingManager::DrawSpriteCentred(CWindowManager* pWindowManager, int X, int Y, int iWidth, int iHeight, sf::Texture* pTexture)
-{
+
+void CDrawingManager::DrawSpriteCentred(CWindowManager* pWindowManager, int X, int Y, int iWidth, int iHeight, sf::Texture* pTexture) {
 	if (!pTexture)
 		return;
 
@@ -141,8 +140,8 @@ void CDrawingManager::DrawSpriteCentred(CWindowManager* pWindowManager, int X, i
 	/* Draw to window*/
 	pWindowManager->Draw(&sp);
 }
-void CDrawingManager::DrawSpriteCentred(CWindowManager* pWindowManager, Vector2i vPosition, int iWidth, int iHeight, sf::Texture* pTexture)
-{
+
+void CDrawingManager::DrawSpriteCentred(CWindowManager* pWindowManager, Vector2i vPosition, int iWidth, int iHeight, sf::Texture* pTexture) {
 	if (!pTexture)
 		return;
 
@@ -163,8 +162,7 @@ void CDrawingManager::DrawSpriteCentred(CWindowManager* pWindowManager, Vector2i
 }
 
 void CDrawingManager::DrawSquareCentred(CWindowManager* pWindowManager, Vector2i vPosition, int iSize, unsigned __int8 R, unsigned __int8 G,
-	unsigned __int8 B, unsigned __int8 A)
-{
+	unsigned __int8 B, unsigned __int8 A) {
 	sf::RectangleShape sq(sf::Vector2f((float)iSize, (float)iSize));
 
 	sq.setOrigin(iSize / 2.0f, iSize / 2.0f);
@@ -174,9 +172,9 @@ void CDrawingManager::DrawSquareCentred(CWindowManager* pWindowManager, Vector2i
 
 	pWindowManager->Draw(&sq);
 }
+
 void CDrawingManager::DrawRectangleCentred(CWindowManager* pWindowManager, Vector2i vPosition, int iWidth, int iHeight, unsigned __int8 R, unsigned __int8 G,
-	unsigned __int8 B, unsigned __int8 A)
-{
+	unsigned __int8 B, unsigned __int8 A) {
 	sf::RectangleShape sq(sf::Vector2f((float)iWidth, (float)iHeight));
 
 	sq.setOrigin(iWidth/ 2.0f, iHeight/ 2.0f);
@@ -188,8 +186,7 @@ void CDrawingManager::DrawRectangleCentred(CWindowManager* pWindowManager, Vecto
 }
 
 void CDrawingManager::DrawOutlinedRectangleCentred(CWindowManager* pWindowManager, Vector2i vPosition, int iWidth, int iHeight, unsigned __int8 R, unsigned __int8 G,
-	unsigned __int8 B, unsigned __int8 A)
-{
+	unsigned __int8 B, unsigned __int8 A) {
 	sf::RectangleShape sq(sf::Vector2f((float)iWidth, (float)iHeight));
 
 	sq.setOrigin(iWidth/ 2.0f, iHeight/ 2.0f);
@@ -201,8 +198,7 @@ void CDrawingManager::DrawOutlinedRectangleCentred(CWindowManager* pWindowManage
 }
 
 void CDrawingManager::DrawSquareToTargetCentred(sf::RenderTarget* pTarget, Vector2i vPosition, int iSize, unsigned __int8 R, unsigned __int8 G,
-	unsigned __int8 B, unsigned __int8 A)
-{
+	unsigned __int8 B, unsigned __int8 A) {
 	sf::RectangleShape sq(sf::Vector2f((float)iSize, (float)iSize));
 
 	sq.setOrigin(iSize / 2.0f, iSize / 2.0f);
@@ -213,8 +209,7 @@ void CDrawingManager::DrawSquareToTargetCentred(sf::RenderTarget* pTarget, Vecto
 	pTarget->draw(sq);
 }
 
-void CDrawingManager::DrawSpriteToTargetCentred(sf::RenderTarget* pTarget, int X, int Y, int iWidth, int iHeight, sf::Texture* pTexture)
-{
+void CDrawingManager::DrawSpriteToTargetCentred(sf::RenderTarget* pTarget, int X, int Y, int iWidth, int iHeight, sf::Texture* pTexture) {
 	if (!pTexture)
 		return;
 
@@ -235,19 +230,35 @@ void CDrawingManager::DrawSpriteToTargetCentred(sf::RenderTarget* pTarget, int X
 }
 
 void CDrawingManager::DrawSquareToTarget(sf::RenderTarget* pTarget, Vector2i vPosition, int iSize, unsigned __int8 R, unsigned __int8 G,
-	unsigned __int8 B, unsigned __int8 A)
-{
+	unsigned __int8 B, unsigned __int8 A) {
 	sf::RectangleShape sq(sf::Vector2f((float)iSize, (float)iSize));
 
 	sq.setPosition((float)vPosition.X, (float)vPosition.Y);
 	sq.setFillColor(sf::Color(R, G, B, A));
-	sq.setOutlineThickness(0.0f);
 
 	pTarget->draw(sq);
 }
 
-void CDrawingManager::DrawSpriteToTarget(sf::RenderTarget* pTarget, int X, int Y, int iWidth, int iHeight, sf::Texture* pTexture)
-{
+void CDrawingManager::DrawSquareToTarget(sf::RenderTarget* pTarget, int x, int y, int iSize, unsigned __int8 R, unsigned __int8 G,
+	unsigned __int8 B, unsigned __int8 A) {
+	sf::RectangleShape sq(sf::Vector2f((float)iSize, (float)iSize));
+
+	sq.setPosition((float)x, (float)y);
+	sq.setFillColor(sf::Color(R, G, B, A));
+
+	pTarget->draw(sq);
+}
+
+void CDrawingManager::DrawSquareToTarget(sf::RenderTarget* pTarget, int x, int y, sf::Vector2f& vSize, unsigned __int8 R, unsigned __int8 G,
+	unsigned __int8 B, unsigned __int8 A) {
+	sf::RectangleShape sq(vSize);
+	sq.setPosition((float)x, (float)y);
+	sq.setFillColor(sf::Color(R, G, B, A));
+
+	pTarget->draw(sq);
+}
+
+void CDrawingManager::DrawSpriteToTarget(sf::RenderTarget* pTarget, int X, int Y, int iSize, sf::Texture* pTexture, sf::Uint8 a) {
 	if (!pTexture)
 		return;
 
@@ -258,8 +269,9 @@ void CDrawingManager::DrawSpriteToTarget(sf::RenderTarget* pTarget, int X, int Y
 
 	/* Scale to required dimensions */
 	sf::Vector2u f = pTexture->getSize();
-	sf::Vector2f scale((float)iWidth / f.x, (float)iHeight / f.y);
+	sf::Vector2f scale((float)iSize / f.x, (float)iSize / f.y);
 	sp.setScale(scale);
+	sp.setColor(sf::Color(255, 255, 255, a));
 
 	/* Draw to target*/
 	pTarget->draw(sp);

@@ -1,11 +1,13 @@
-#pragma once
+#ifndef __CINIWRITER_H__
+#define __CINIWRITER_H__
+
 #include <vector>
 
 #define MAX_ITEM_SIZE 256
 
-class CIniWriter
-{
+class CIniWriter {
 	std::vector< char* > m_Items;
+
 public: 
 	~CIniWriter();
 	void ClearItems();
@@ -17,3 +19,5 @@ public:
 	void StoreSectionHeader(char* szSectionName);
 	void WriteToFile(char* szFileName);
 };
+
+#endif

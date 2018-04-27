@@ -1,13 +1,16 @@
+#ifndef __CGAMESTATEHANDLER_H__
+#define __CGAMESTATEHANDLER_H__
+
 class CGameState;
 class CGame;
+
 /*	Handle game states and allow switching
 TODO: Possibly make states have a stack,
-So you can return etc
-*/
-class CGameStateHandler 
-{
+So you can return etc */
+class CGameStateHandler {
 	/* Current game state */
 	CGameState* m_State;
+
 public:
 	CGameStateHandler();
 	~CGameStateHandler();
@@ -22,3 +25,5 @@ public:
 	void Update(CGame* pGame);
 	void HandleInput(CGame* pGame);
 };
+
+#endif

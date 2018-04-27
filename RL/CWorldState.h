@@ -1,14 +1,14 @@
-#pragma once 
+#ifndef __CWORLDSTATE_H__
+#define __CWORLDSTATE_H__
+
 #include "CGameState.h"
 #include "CWorldPlayer.h"
 #include "CWorldMap.h"
 #include "CMenuOverlay.h"
 
-class CWorldState : public CGameState
-{
-private:
-	static CWorldState m_WorldState;
+class CWorldState : public CGameState {
 
+private:
 	CWorldMap m_Map;
 	int m_iTileSize;
 	CWorldPlayer m_Player;
@@ -26,12 +26,14 @@ public:
 	void Draw(CGame* pGame);
 	void Update(CGame* pGame);
 	void HandleInput(CGame* pGame);
-
+	 
 	void PauseState();
-	void ResumeState();
+	void ResumeState(); 
 
-	static CWorldState* Instance()
-	{
-		return &m_WorldState;
+	static CWorldState* Instance() {
+		static CWorldState WorldState;
+		return &WorldState;
 	}
 };
+
+#endif

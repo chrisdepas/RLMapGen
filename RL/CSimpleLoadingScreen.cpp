@@ -3,12 +3,12 @@
 #include "CGame.h"
 void CSimpleLoadingScreen::ClearActivities() {
 	for (int i = 0; i < m_iActivityCount; i++) {
-
+		free(m_szActivity[m_iActivityCount]); 
 	}
-	CSimpleLoadingScreen();
+	m_iActivityCount = 0;
+	m_fProgress = 0.0f;
 }
-CSimpleLoadingScreen::CSimpleLoadingScreen() 
-{
+CSimpleLoadingScreen::CSimpleLoadingScreen() {
 	m_iActivityCount = 0;
 	m_fProgress = 0.0f;
 }

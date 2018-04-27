@@ -1,8 +1,7 @@
 #include "stdafx.h"
 #include "CGameState.h"
 
-void CGameState::SetReturnState(CGameState* pReturnState)
-{
+void CGameState::SetReturnState(CGameState* pReturnState) {
 	m_pgsReturnState = pReturnState;
 }
 void CGameState::Init(CGame* pGame){}

@@ -1,20 +1,41 @@
-#pragma once
+#ifndef __CINIREADER_H__
+#define __CINIREADER_H__
+
 #include <vector>
 #include "CIniItem.h"
 
-class CIniReader
-{
-	std::vector< CIniItem* > m_Items;
-	void	ClearItems();
+#define INIREADER_MAX_SECTIONS 64
+
+class CIniReader { 
+
+	struct CIniSection {
+		char* m_szSectionName;
+		std::vector< CIniItem* > m_SectionItems;
+		bool MatchesSection(char* szSection);
+	};
+
+	std::vector<CIniItem*> m_DefaultItems;
+	std::vector<CIniSection*> m_Sections;
+	void ClearItems(); 
+
 public:
 	CIniReader();
 	~CIniReader();
-	CIniItem* GetItem(char* Key);
-	bool	ItemExists(char* Key);
+
 	bool	ParseFile(char* FileName);
-	bool	GetBoolValue(char* Key, bool& ret);
-	bool	GetIntValue(char* Key, int& ret);
-	bool	GetFloatValue(char* Key, float& ret);
+
+	CIniItem* GetItem(char* Key);
+	CIniItem* GetItem(char* Section, char* Key);
+	bool	ItemExists(char* Key, char* Section = NULL);
+
+	char*	GetFirstSection();
+	char*	GetNextSection(char* szLastSection);
+
+	bool	GetBoolValue(char* Key, bool& ret, char* Section = NULL);
+	bool	GetIntValue(char* Key, int& ret, char* Section = NULL);
+	bool	GetFloatValue(char* Key, float& ret, char* Section = NULL);
 	/* Get string representation of value. Dont save! may be freed*/
-	bool    GetStringValue(char* Key, char*& ret);
-};
+	bool    GetStringValue(char* Key, char*& ret, char* Section=NULL);
+};  
+
+#endif

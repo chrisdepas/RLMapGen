@@ -1,10 +1,13 @@
-#pragma once
+#ifndef __CRANDOM_H__
+#define __CRANDOM_H__
+
 #include "noise/noise.h"
-class CRandom
-{
+
+class CRandom {
 	int m_iPerlinOctaveCount;
 	float m_fPerlinFrequency;
 	float m_fPerlinPersistence;
+
 	noise::module::Perlin m_Perlin;
 	noise::module::Billow m_Billow;
 	noise::module::Voronoi m_Voronoi;
@@ -17,9 +20,9 @@ class CRandom
 
 	float Noise(int iX, int iY);
 	float SmoothNoise(int iX, int iY);
+
 	/* Interpolate between values A and B at position Mu (0-1.0f) along this ray, where 0 is A and 1.0 is B */
 	float Interpolate(float fA, float fB, float fMu);
-
 
 public:
 	CRandom();
@@ -46,3 +49,5 @@ public:
 	float BillowNoise(float fX, float fY);
 	float InterpolatedNoise(float fX, float fY);
 };
+
+#endif

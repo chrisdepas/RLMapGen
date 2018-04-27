@@ -5,7 +5,7 @@ bool CIniItem::MatchesKey(char* Key)
 {
 	return !_stricmp(Key, m_szKey);
 }
-bool	CIniItem::GetBool()
+bool CIniItem::GetBool()
 {
 	if (!m_szValue)
 		return false;

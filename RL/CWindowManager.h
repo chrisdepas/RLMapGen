@@ -1,15 +1,17 @@
-#pragma once
+#ifndef __CWINDOWMANAGER_H__
+#define __CWINDOWMANAGER_H__
+
 #include "Vector.h"
 #include <SFML/Graphics.hpp>
 #include "CSettings.h"
 #include "CInput.h"
 
-class CWindowManager
-{
+class CWindowManager {
+	sf::RenderWindow* m_pWindow;
+
 	Vector2i m_vSize;
 	bool m_bWindowCreated;
 	bool m_bFocus;
-	sf::RenderWindow* m_pWindow;
 	bool m_bWindowClosed;
 
 public:
@@ -34,3 +36,5 @@ public:
 	void MoveCamera(Vector2i CentrePos, int TileSize);
 	void MoveCamera(Vector2f CentrePos);
 };
+
+#endif

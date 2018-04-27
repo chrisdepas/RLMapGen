@@ -1,4 +1,6 @@
-#pragma once
+#ifndef __CSETTINGS_H__
+#define __CSETTINGS_H__
+
 #include "vector.h"
 #include "CIniReader.h"
 #include "CIniWriter.h"
@@ -27,8 +29,8 @@
 #define VSYNC_STRING "VSyncEnabled"
 #define DEFAULT_VSYNC false
 
-class CSettings
-{
+class CSettings {
+
 public:
 	Vector2i m_vScreenSize;
 	bool m_bFullscreen;
@@ -36,8 +38,11 @@ public:
 	int m_iFPSCountLimit;
 	bool m_bVSync;
 	bool m_bFullbright;
+
 	CSettings();
 	~CSettings();
 	void LoadFromFile(char* szFileName, CIniReader* pIniReader);
 	void SaveToFile(char* szFileName, CIniWriter* pIniWriter);
 };
+
+#endif

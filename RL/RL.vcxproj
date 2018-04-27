@@ -52,12 +52,12 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>SFML_STATIC;WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\rl\libnoise\include;C:\rl\SFML-2.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\..\libnoise\include;..\..\SFML-2.3.2\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\rl\libnoise\lib;C:\rl\SFML-2.3.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\libnoise\lib;..\..\SFML-2.3.2\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-window-s-d.lib;sfml-graphics-s-d.lib;sfml-system-s-d.lib;sfml-main-d.lib;sfml-audio-s-d.lib;winmm.lib;ws2_32.lib;openal32.lib;flac.lib;vorbisenc.lib;vorbisfile.lib;vorbis.lib;ogg.lib;gdi32.lib;opengl32.lib;freetype.lib;jpeg.lib;libnoise.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -83,7 +83,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="Actions.h" />
+    <ClInclude Include="CBaseBuildingBlock.h" />
+    <ClInclude Include="CBaseCombatEntity.h" />
+    <ClInclude Include="CBaseEntity.h" />
+    <ClInclude Include="CBaseResource.h" />
     <ClInclude Include="CDrawingManager.h" />
     <ClInclude Include="CGame.h" />
     <ClInclude Include="CGameState.h" />
@@ -95,13 +102,15 @@
     <ClInclude Include="CMenuOverlay.h" />
     <ClInclude Include="CMenuState.h" />
     <ClInclude Include="CPerlinMap.h" />
-    <ClInclude Include="CPerlinVisualiser.h" />
+    <ClInclude Include="CPerlinVisualiserState.h" />
     <ClInclude Include="CRandom.h" />
     <ClInclude Include="CSettings.h" />
     <ClInclude Include="CSimpleLoadingScreen.h" />
     <ClInclude Include="CTextureManager.h" />
     <ClInclude Include="CTime.h" />
     <ClInclude Include="CWindowManager.h" />
+    <ClInclude Include="CWorldEntity.h" />
+    <ClInclude Include="CWorldItem.h" />
     <ClInclude Include="CWorldMap.h" />
     <ClInclude Include="CWorldPlayer.h" />
     <ClInclude Include="CWorldPlayerHUD.h" />
@@ -123,7 +132,7 @@
     <ClCompile Include="CMenuOverlay.cpp" />
     <ClCompile Include="CMenuState.cpp" />
     <ClCompile Include="CPerlinMap.cpp" />
-    <ClCompile Include="CPerlinVisualiser.cpp" />
+    <ClCompile Include="CPerlinVisualiserState.cpp" />
     <ClCompile Include="CRandom.cpp" />
     <ClCompile Include="CSettings.cpp" />
     <ClCompile Include="CSimpleLoadingScreen.cpp" />
